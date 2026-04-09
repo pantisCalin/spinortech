@@ -254,9 +254,6 @@ li a {
     width: auto;
     left: auto;
     transition: 0.5s;
-    animation-name: substituteAnimation;
-    animation-duration: 2s;
-    animation-fill-mode: forwards;
   }
 
   li {
@@ -286,5 +283,11 @@ li a {
     justify-content: center;
     padding: 0px 2rem;
     box-sizing: border-box;
+  }
+
+  .home ul {
+    animation-name: substituteAnimation;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
   }
 }
