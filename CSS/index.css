@@ -1,0 +1,303 @@
+:root {
+  --main_color: #0f172a;
+  --sec_color: #f59e0b;
+  --bkg_color: #f1f5f9;
+  --max-width: 1200px;
+  --navbar_height: 4.5rem;
+  --x_padding: 2rem;
+  --y_padding: 6rem;
+  --display_font: 2.66rem; /*24pt->32px->2.66rem*/
+  --h1_font: 2rem; /*18pt->24px-> 2rem*/
+  --h2_font: 1.55rem; /*14pt->18.66px->1.55rem*/
+  --h3_font: 1.22rem; /*11pt->14.66px->1.22rem*/
+  --body_font: 1rem; /*9pt->12px->1rem*/
+  --footnote_font: 0.777pt; /*7pt->9.33px*/
+}
+
+@font-face {
+  font-family: "LtBurkaRegular";
+  src: url(./fonts/BukraLt.ttf);
+  font-weight: 100;
+}
+@font-face {
+  font-family: "LtBurkaRegular";
+  src: url(./fonts/BurkaRegular.ttf);
+  font-weight: 400;
+}
+@font-face {
+  font-family: "LtBurkaRegular";
+  src: url(./fonts/BurkaMd.ttf);
+  font-weight: 500;
+}
+@font-face {
+  font-family: "LtBurkaRegular";
+  src: url(./fonts/BurkaSmBd.ttf);
+  font-weight: 600;
+}
+@font-face {
+  font-family: "LtBurkaRegular";
+  src: url(./fonts/BurkaBold.ttf);
+  font-weight: bold;
+  font-weight: 700;
+}
+
+h1 {
+  font-size: var(--h1_font);
+}
+h2 {
+  font-size: var(--h2_font);
+}
+h3 {
+  font-size: var(--h3_font);
+}
+
+p {
+  font-size: var(--body_font);
+  line-height: 1.6rem;
+}
+
+body,
+html {
+  font-size: 9pt;
+  width: 100vw;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  overflow-y: hidden;
+  font-family: LtBurkaRegular;
+  -webkit-perspective: 1000;
+  -webkit-backface-visibility: hidden;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: var(--navbar_height);
+  box-sizing: border-box;
+  background: radial-gradient(
+    circle at 50% 80%,
+    rgb(255, 255, 255) 30%,
+    var(--bkg_color) 70%
+  );
+}
+
+header,
+section,
+footer {
+  height: 100%;
+  flex-shrink: 0;
+}
+
+header,
+section,
+footer,
+nav {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+  text-wrap: wrap;
+}
+
+.display {
+  font-size: var(--display_font);
+  font-weight: 800;
+  color: var(--main_color);
+}
+
+.hero,
+.footer_note {
+  text-align: center;
+  padding: var(--y_padding) var(--x_padding);
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 45rem;
+}
+
+.hero .display {
+  animation-name: hero_entry_animation;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
+.hero p {
+  animation-name: hero_entry_animation;
+  animation-duration: 2.3s;
+  animation-fill-mode: forwards;
+}
+.hero .CTA_button {
+  animation-name: hero_entry_animation;
+  animation-duration: 2.67s;
+  animation-fill-mode: forwards;
+}
+@keyframes hero_entry_animation {
+  0% {
+    opacity: 0;
+  }
+  90% {
+    opacity: 0;
+  }
+  99% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.hero p {
+  color: var(--main_color);
+  margin: 1rem 0;
+}
+
+.CTA_button {
+  font-size: var(--h3_font);
+  background-color: var(--sec_color);
+  border: none;
+  text-decoration: none;
+  border-radius: 50px;
+  font-weight: bold;
+  margin-top: 1rem;
+  transition: 0.3s;
+  height: fit-content;
+  padding: 0;
+  border: 1px solid var(--sec_color);
+}
+
+.CTA_button:hover {
+  background-color: white;
+  border: 1px solid var(--main_color);
+  box-sizing: border-box;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.CTA_button:hover a {
+  color: var(--main_color);
+}
+.CTA_button a {
+  display: inline-block;
+  padding: var(--h3_font) var(--h1_font);
+  box-sizing: border-box;
+  color: var(--main_color);
+  text-decoration: none;
+}
+.problem_statement,
+.solution_statement,
+.who_we_work_with {
+  padding: 0rem var(--x_padding);
+  box-sizing: border-box;
+  max-width: var(--max-width);
+  width: 100%;
+}
+
+.problem_statement h2,
+.solution_statement h2,
+.who_we_work_with h2 {
+  color: var(--main_color);
+}
+
+.problem_statement p,
+.solution_statement p,
+.who_we_work_with p,
+.footer_note p {
+  color: var(--main_color);
+  max-width: 600px;
+  margin-bottom: 2rem;
+}
+
+.footer_note h2 {
+  color: var(--main_color);
+}
+
+.footer_note p {
+  color: var(--main_color);
+}
+
+.problem_boxes {
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid var(--main_color);
+  padding-top: 3rem;
+}
+
+.problem_box {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  min-width: 60vw;
+  box-sizing: border-box;
+  border-radius: 10px;
+}
+
+.problem_box h3 {
+  color: var(--main_color);
+  margin: 0.5rem 0;
+}
+
+.problem_box p {
+  color: var(--main_color);
+  margin-top: 0.5rem;
+  letter-spacing: 0.02rem;
+  line-height: 1.2rem;
+}
+
+.line_division {
+  display: none;
+  width: 2px;
+  background-color: var(--main_color);
+  height: 10rem;
+}
+
+.html_desktop .hero {
+  /* background-color: green; */
+}
+@media (min-width: 1200px) {
+  html {
+    font-size: 11pt;
+  }
+  .CTA_button a {
+    padding: 0.8rem 1.5rem;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  /* html,
+  body {
+    font-size: 12px;
+  } */
+}
+
+/* @media (max-width: 660px) {
+  .problem_boxes,
+  section {
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .line_division {
+    display: none;
+  }
+  button:focus {
+    background: none;
+    color: var(--main_color);
+  }
+    .nav-links {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+
+.NavDropButton {
+  display: none;
+}
+.nav-links li a {
+  color: var(--main_color);
+  text-decoration: none;
+  transition: 0.3s;
+  border-bottom: 1px solid white;
+}
+.nav-links li a:hover {
+  transition: 0.3s;
+  border-bottom: 1px solid var(--main_color);
+}
+} */
