@@ -15,7 +15,7 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0rem var(--x_padding);
+  padding: 0rem 0rem;
   box-sizing: border-box;
   width: 100%;
   height: 100%;
@@ -135,35 +135,35 @@ li a {
     position: absolute;
     opacity: 0;
     top: 40vh;
-    left: calc(50vw - var(--navbar_height) / 2);
+    left: 50vw;
     -webkit-transform: translateX(-50%) translateY(-50%);
   }
   25% {
     position: absolute;
     opacity: 1;
     top: 40vh;
-    left: calc(50vw - var(--navbar_height) / 2);
+    left: 50vw;
     -webkit-transform: translateX(-50%) translateY(-50%);
   }
   70% {
     position: absolute;
     opacity: 1;
     top: 40vh;
-    left: calc(50vw - var(--navbar_height) / 2);
+    left: 50vw;
     -webkit-transform: translateX(-50%) translateY(-50%);
   }
 
   90% {
     position: absolute;
     top: calc(var(--navbar_height) / 2);
-    left: var(--x_padding);
+    left: 0;
     -webkit-transform: translateX(0%) translateY(-50%);
   }
 
   100% {
     position: absolute;
     top: calc(var(--navbar_height) / 2);
-    left: var(--x_padding);
+    left: 0;
     -webkit-transform: translateX(0%) translateY(-50%);
     display: none;
   }
@@ -173,14 +173,15 @@ li a {
     position: absolute;
     opacity: 0;
     top: 40vh;
-    left: calc(50vw - var(--navbar_height) / 2);
+    left: 50vw;
     -webkit-transform: translateX(-50%) translateY(-50%);
   }
   25% {
     position: absolute;
     opacity: 1;
     top: 40vh;
-    left: calc(50vw - var(--navbar_height) / 2);
+    left: 50vw;
+
     -webkit-transform: translateX(-50%) translateY(-50%);
     opacity: 1;
   }
@@ -188,21 +189,21 @@ li a {
   70% {
     position: absolute;
     top: 40vh;
-    left: calc(50vw - var(--navbar_height) / 2);
+    left: 50vw;
     -webkit-transform: translateX(-50%) translateY(-50%);
     opacity: 1;
   }
   90% {
     position: absolute;
     top: 40vh;
-    left: calc(50vw - var(--navbar_height) / 2);
+    left: 50vw;
     -webkit-transform: translateX(-50%) translateY(-50%);
     opacity: 0;
   }
   100% {
     position: absolute;
     top: 40vh;
-    left: calc(50vw - var(--navbar_height) / 2);
+    left: 50vw;
     -webkit-transform: translateX(-50%) translateY(-50%);
     display: none;
     opacity: 0;
