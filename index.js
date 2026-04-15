@@ -70,8 +70,8 @@ forward_button.onclick = () => swipe_down();
 backward_button.className = "backward_button";
 forward_button.className = "forward_button";
 
-slider_container.appendChild(backward_button);
-slider_container.appendChild(forward_button);
+slider_parent.appendChild(backward_button);
+slider_parent.appendChild(forward_button);
 
 // Swipe functionality for slider
 
