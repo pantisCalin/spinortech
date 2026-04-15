@@ -75,9 +75,9 @@ body {
   align-items: center;
   padding-top: var(--navbar_height);
   box-sizing: border-box;
+
   background: linear-gradient(var(--main_color) 60%, var(--bkg_color) 100%);
 }
-
 header,
 section,
 footer {
@@ -216,8 +216,25 @@ nav {
   height: 10rem;
 }
 
+.html_desktop header {
+  display: flex;
+  flex-direction: row;
+}
 .html_desktop .hero {
-  /* background-color: green; */
+  text-align: left;
+  margin-right: 20vw;
+}
+.html_desktop header {
+  /* Top layer is 100px wide and 100px tall. Bottom layer covers the area. */
+  background: url("../public/icon.webp");
+  background-repeat: no-repeat;
+  background-size:
+    70vw 70vw,
+    cover;
+  background-position:
+    right center,
+    center;
+  text-align: left;
 }
 @media (min-width: 1200px) {
   html {
