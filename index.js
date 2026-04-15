@@ -122,8 +122,8 @@ for (let i = 0; i < slider_container.childElementCount; i++) {
 // } else {
 
 const slider_children = slider_container.children;
-let touchstartY = 0;
-let touchendY = 0;
+let touchstartX = 0;
+let touchendX = 0;
 let currentPage = 0;
 let lastScrollTop = 0;
 
@@ -132,7 +132,7 @@ if (isMobile) {
   slider_container.addEventListener(
     "touchstart",
     (e) => {
-      touchstartY = e.changedTouches[0].pageY;
+      touchstartX = e.changedTouches[0].pageX;
     },
     false,
   );
@@ -140,7 +140,7 @@ if (isMobile) {
   slider_container.addEventListener(
     "touchend",
     (e) => {
-      touchendY = e.changedTouches[0].pageY;
+      touchendX = e.changedTouches[0].pageX;
       handleGesture();
     },
     false,
@@ -151,6 +151,8 @@ if (isMobile) {
     console.log("zoomed");
     slider_children[currentPage].scrollIntoView();
   });
+
+  // Wheeling on the page
   const wheelPage = (e) => {
     if (!e.ctrlKey) {
       if (e.deltaY > 0) {
@@ -166,25 +168,30 @@ if (isMobile) {
   };
   slider_container.addEventListener("wheel", wheelPage, false);
 }
+
 // Handle the swipe gesture to determine the direction and scroll accordingly
 const handleGesture = () => {
-  if (touchendY < touchstartY) {
+  if (touchendX < touchstartX) {
     swipe_down();
-  } else if (touchendY > touchstartY) {
+  } else if (touchendX > touchstartX) {
     swipe_up();
   }
 };
 
 // Functions to handle swiping left and right, updating the slider indicators and scrolling the slider container
 const swipe_up = () => {
+  slider_indicator.children[currentPage].classList.remove("active_dot_slider");
   currentPage = Math.max(0, currentPage - 1);
+  slider_indicator.children[currentPage].classList.add("active_dot_slider");
   slider_children[currentPage].scrollIntoView();
 };
 const swipe_down = () => {
+  slider_indicator.children[currentPage].classList.remove("active_dot_slider");
   currentPage = Math.min(
     currentPage + 1,
     slider_container.childElementCount - 1,
   );
+  slider_indicator.children[currentPage].classList.add("active_dot_slider");
   slider_children[currentPage].scrollIntoView();
 
   // slider_container.scrollTo(0, slider_position);

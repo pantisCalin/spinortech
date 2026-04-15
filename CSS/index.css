@@ -75,11 +75,7 @@ body {
   align-items: center;
   padding-top: var(--navbar_height);
   box-sizing: border-box;
-  background: radial-gradient(
-    circle at 50% 80%,
-    rgb(255, 255, 255) 30%,
-    var(--bkg_color) 70%
-  );
+  background: linear-gradient(var(--main_color) 60%, var(--bkg_color) 100%);
 }
 
 header,
@@ -105,7 +101,7 @@ nav {
 .display {
   font-size: var(--display_font);
   font-weight: 800;
-  color: var(--main_color);
+  color: var(--bkg_color);
 }
 
 .hero,
@@ -117,37 +113,8 @@ nav {
   max-width: 45rem;
 }
 
-.hero .display {
-  animation-name: hero_entry_animation;
-  animation-duration: 2s;
-  animation-fill-mode: forwards;
-}
 .hero p {
-  animation-name: hero_entry_animation;
-  animation-duration: 2.3s;
-  animation-fill-mode: forwards;
-}
-.hero .CTA_button {
-  animation-name: hero_entry_animation;
-  animation-duration: 2.67s;
-  animation-fill-mode: forwards;
-}
-@keyframes hero_entry_animation {
-  0% {
-    opacity: 0;
-  }
-  90% {
-    opacity: 0;
-  }
-  99% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-.hero p {
-  color: var(--main_color);
+  color: var(--bkg_color);
   margin: 1rem 0;
 }
 
@@ -194,30 +161,30 @@ nav {
 .problem_statement h2,
 .solution_statement h2,
 .who_we_work_with h2 {
-  color: var(--main_color);
+  color: var(--bkg_color);
 }
 
 .problem_statement p,
 .solution_statement p,
 .who_we_work_with p,
 .footer_note p {
-  color: var(--main_color);
+  color: var(--bkg_color);
   max-width: 600px;
   margin-bottom: 2rem;
 }
 
 .footer_note h2 {
-  color: var(--main_color);
+  color: var(--bkg_color);
 }
 
 .footer_note p {
-  color: var(--main_color);
+  color: var(--bkg_color);
 }
 
 .problem_boxes {
   display: flex;
   flex-direction: column;
-  border-top: 1px solid var(--main_color);
+  border-top: 1px solid var(--bkg_color);
   padding-top: 3rem;
 }
 
@@ -231,12 +198,12 @@ nav {
 }
 
 .problem_box h3 {
-  color: var(--main_color);
+  color: var(--bkg_color);
   margin: 0.5rem 0;
 }
 
 .problem_box p {
-  color: var(--main_color);
+  color: var(--bkg_color);
   margin-top: 0.5rem;
   letter-spacing: 0.02rem;
   line-height: 1.2rem;
@@ -245,7 +212,7 @@ nav {
 .line_division {
   display: none;
   width: 2px;
-  background-color: var(--main_color);
+  background-color: var(--bkg_color);
   height: 10rem;
 }
 

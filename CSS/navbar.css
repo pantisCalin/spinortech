@@ -9,7 +9,7 @@ nav {
   height: var(--navbar_height);
   box-sizing: border-box;
   z-index: 1000;
-  background-color: var(--bkg_color);
+  background-color: var(--main_color);
 }
 .navbar {
   display: flex;
@@ -23,13 +23,13 @@ nav {
 }
 
 .NavDropButton {
-  color: var(--main_color);
+  color: var(--bkg_color);
   font-weight: 800;
   font-size: 2rem;
   display: flex;
   padding: 0rem 1rem;
   border: none;
-  background-color: var(--bkg_color);
+  background-color: var(--main_color);
   height: 100%;
   padding: 1rem;
   box-sizing: border-box;
@@ -54,9 +54,9 @@ ul {
 li {
   width: 100%;
   min-height: 5rem;
-  background-color: var(--bkg_color);
+  background-color: var(--main_color);
   font-weight: 800;
-  border-top: 1px solid var(--bkg_color);
+  border-top: 1px solid var(--main_color);
   box-sizing: border-box;
   display: flex;
   align-items: center;
@@ -65,7 +65,7 @@ li {
 
 li a {
   display: inline-block;
-  color: var(--main_color);
+  color: var(--bkg_color);
   text-decoration: none;
   font-size: var(--h3_font);
   width: 100%;
@@ -97,140 +97,6 @@ li a {
   font-size: var(--display_font);
   font-weight: bold;
   color: var(--main_color);
-}
-
-.home .logo {
-  animation-name: substituteAnimation;
-  animation-duration: 2s;
-  animation-fill-mode: forwards;
-}
-.home .logo-image {
-  -webkit-animation-name: logo_rotate;
-  -webkit-animation-duration: 2s;
-  -webkit-animation-fill-mode: forwards;
-}
-
-.home .entry_logo {
-  -webkit-animation-name: animation_entry_mobile;
-  -webkit-animation-duration: 2s;
-  -webkit-animation-fill-mode: forwards;
-}
-
-.home .NavDropButton {
-  animation-name: hero_entry_animation;
-  animation-duration: 1.7s;
-  animation-fill-mode: forwards;
-}
-
-@media (min-width: 1200px) {
-  .home .entry_logo {
-    -webkit-animation-name: animation_entry_desktop;
-    -webkit-animation-duration: 2s;
-    -webkit-animation-fill-mode: forwards;
-  }
-}
-
-@keyframes animation_entry_mobile {
-  0% {
-    position: absolute;
-    opacity: 0;
-    top: 40vh;
-    left: calc(50vw - var(--navbar_height) / 2);
-    -webkit-transform: translateX(-50%) translateY(-50%);
-  }
-  25% {
-    position: absolute;
-    opacity: 1;
-    top: 40vh;
-    left: calc(50vw - var(--navbar_height) / 2);
-    -webkit-transform: translateX(-50%) translateY(-50%);
-  }
-  70% {
-    position: absolute;
-    opacity: 1;
-    top: 40vh;
-    left: calc(50vw - var(--navbar_height) / 2);
-    -webkit-transform: translateX(-50%) translateY(-50%);
-  }
-
-  90% {
-    position: absolute;
-    top: calc(var(--navbar_height) / 2);
-    left: 0;
-    -webkit-transform: translateX(0%) translateY(-50%);
-  }
-
-  100% {
-    position: absolute;
-    top: calc(var(--navbar_height) / 2);
-    left: 0;
-    -webkit-transform: translateX(0%) translateY(-50%);
-    display: none;
-  }
-}
-@keyframes animation_entry_desktop {
-  0% {
-    position: absolute;
-    opacity: 0;
-    top: 40vh;
-    left: calc(50vw - var(--navbar_height) / 2);
-    -webkit-transform: translateX(-50%) translateY(-50%);
-  }
-  25% {
-    position: absolute;
-    opacity: 1;
-    top: 40vh;
-    left: calc(50vw - var(--navbar_height) / 2);
-    -webkit-transform: translateX(-50%) translateY(-50%);
-    opacity: 1;
-  }
-
-  70% {
-    position: absolute;
-    top: 40vh;
-    left: calc(50vw - var(--navbar_height) / 2);
-    -webkit-transform: translateX(-50%) translateY(-50%);
-    opacity: 1;
-  }
-  90% {
-    position: absolute;
-    top: 40vh;
-    left: calc(50vw - var(--navbar_height) / 2);
-    -webkit-transform: translateX(-50%) translateY(-50%);
-    opacity: 0;
-  }
-  100% {
-    position: absolute;
-    top: 40vh;
-    left: calc(50vw - var(--navbar_height) / 2);
-    -webkit-transform: translateX(-50%) translateY(-50%);
-    display: none;
-    opacity: 0;
-  }
-}
-
-@keyframes logo_rotate {
-  25% {
-    transform: rotate(0);
-  }
-  48% {
-    transform: rotate(360deg);
-  }
-  70% {
-    transform: rotate(0);
-  }
-}
-
-@keyframes substituteAnimation {
-  0% {
-    opacity: 0;
-  }
-  99% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
 }
 
 @media (min-width: 1200px) {
@@ -265,7 +131,6 @@ li a {
     box-sizing: border-box;
   }
   li:hover > a {
-    background-color: var(--main_color);
     color: var(--sec_color);
     transition: 0.3s;
     border-radius: 0.5rem;
@@ -273,7 +138,7 @@ li a {
   li a {
     transition: 0.3s;
     border-radius: 0.5rem;
-    color: var(--main_color);
+    color: var(--bkg_color);
     text-decoration: none;
     font-size: var(--body_font);
     width: 100%;
@@ -283,11 +148,5 @@ li a {
     justify-content: center;
     padding: 0px 2rem;
     box-sizing: border-box;
-  }
-
-  .home ul {
-    animation-name: substituteAnimation;
-    animation-duration: 2s;
-    animation-fill-mode: forwards;
   }
 }
