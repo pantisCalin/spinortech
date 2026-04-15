@@ -50,3 +50,52 @@
   border-radius: 50%;
   transition: 0.3s;
 }
+
+.html_desktop .backward_button,
+.html_desktop .forward_button {
+  position: absolute;
+  display: flex;
+  justify-content: center; /* Horizontal centering */
+  align-items: center;
+  height: calc(100vh - var(--navbar_height));
+  width: 10vw;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.html_desktop .forward_button {
+  right: 0;
+}
+
+.html_desktop .backward_button:before,
+.html_desktop .forward_button:before {
+  border-right: 0.5rem solid var(--bkg_color);
+  border-top: 0.5rem solid var(--bkg_color);
+  width: 1.5rem;
+  height: 1.5rem;
+  content: "";
+  display: flex;
+  align-items: center;
+  border-radius: 5px;
+}
+
+.html_desktop .backward_button:before {
+  -moz-transform: rotate(225deg);
+  -o-transform: rotate(225deg);
+  -webkit-transform: rotate(225deg);
+  transform: rotate(225deg);
+}
+.html_desktop .forward_button:before {
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.html_desktop .backward_button:focus-visible,
+.html_desktop .forward_button:focus-visible {
+  background-color: rgba(255, 255, 255, 0.1);
+  border: none;
+  outline: none;
+}

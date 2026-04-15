@@ -60,6 +60,19 @@ for (let i = 0; i < slider_container.childElementCount; i++) {
   slider_indicator.appendChild(dot);
 }
 
+// Create buttons
+const backward_button = document.createElement("button");
+const forward_button = document.createElement("button");
+
+backward_button.onclick = () => swipe_up();
+forward_button.onclick = () => swipe_down();
+
+backward_button.className = "backward_button";
+forward_button.className = "forward_button";
+
+slider_container.appendChild(backward_button);
+slider_container.appendChild(forward_button);
+
 // Swipe functionality for slider
 
 // if (!isMobile) {
