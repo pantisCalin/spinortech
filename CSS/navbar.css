@@ -1,19 +1,19 @@
 nav {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   display: flex;
   justify-content: center;
-  position: fixed;
-  top: 0;
-  left: 0;
-  margin: 0;
+  /* margin: 0; */
   height: var(--navbar_height);
   box-sizing: border-box;
   z-index: 1000;
-  background-color: var(--main_color);
+  background-color: var(--fill_main_color);
 }
 .navbar {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   padding: 0rem 0rem;
   box-sizing: border-box;
@@ -23,13 +23,15 @@ nav {
 }
 
 .NavDropButton {
+  position: absolute;
+  top: 0;
+  right: 0;
   color: var(--bkg_color);
   font-weight: 800;
   font-size: 2rem;
   display: flex;
-  padding: 0rem 1rem;
   border: none;
-  background-color: var(--main_color);
+  background-color: var(--fill_main_color);
   height: 100%;
   padding: 1rem;
   box-sizing: border-box;
@@ -54,7 +56,7 @@ ul {
 li {
   width: 100%;
   min-height: 5rem;
-  background-color: var(--main_color);
+  background-color: var(--fill_main_color);
   font-weight: 800;
   border-top: 1px solid var(--main_color);
   box-sizing: border-box;
@@ -87,22 +89,36 @@ li a {
   user-select: none;
   height: var(--navbar_height);
 }
+
 .logo-image {
-  height: calc(var(--navbar_height) - 0.5rem);
-  margin-right: 0.5rem;
-  border-radius: 50%;
+  display: none;
 }
 
 .logoName {
-  font-size: var(--display_font);
+  font-size: 25px;
   font-weight: bold;
-  color: var(--main_color);
+  color: var(--bkg_color);
+}
+
+.html_desktop .logoName {
+  font-weight: 500;
 }
 
 @media (min-width: 1200px) {
   html {
     font-size: 10pt;
   }
+
+  .navbar {
+    justify-content: space-between;
+  }
+  .logo-image {
+    display: block;
+    height: calc(var(--navbar_height) - 0.5rem);
+    margin-right: 0.5rem;
+    border-radius: 50%;
+  }
+
   .CTA_button a {
     padding: 0.8rem 1.5rem;
   }
@@ -140,13 +156,13 @@ li a {
     border-radius: 0.5rem;
     color: var(--bkg_color);
     text-decoration: none;
-    font-size: var(--body_font);
+    font-size: 14px;
     width: 100%;
     height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 0px 2rem;
+    padding: 0px 15px;
     box-sizing: border-box;
   }
 }

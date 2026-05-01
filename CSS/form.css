@@ -1,0 +1,36 @@
+form {
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(
+    -45deg,
+    rgba(241, 245, 249, 0.1),
+    rgba(255, 255, 255, 0.4)
+  );
+  gap: 1rem;
+  padding: 2rem;
+  border-radius: 2rem;
+}
+
+form label {
+  color: var(--sec_color);
+  margin-bottom: 10;
+  font-family: LtBurkaRegular;
+}
+
+form input[type="text"] {
+  font-size: var(--body_font);
+  padding: var(--body_font);
+  margin-bottom: 1rem;
+  border: 1px solid white;
+  background: transparent;
+}
+
+form input[type="text"]::placeholder {
+  color: white;
+}
+
+form .submit {
+  font-size: var(--h3_font);
+  padding: var(--footnote_font) var(--h2_font);
+  width: 100%;
+}
