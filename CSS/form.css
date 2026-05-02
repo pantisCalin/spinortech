@@ -9,8 +9,9 @@ form {
   gap: 1rem;
   padding: 2rem;
   border-radius: 2rem;
-  max-width: 45rem;
-  min-width: 30rem;
+  box-sizing: border-box;
+  max-width: 100%;
+  width: 45rem;
   margin: auto;
 }
 
