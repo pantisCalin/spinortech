@@ -75,6 +75,7 @@ li a {
   display: flex;
   align-items: center;
   justify-content: center;
+  font-weight: 400;
 }
 .ExtendDrow {
   height: calc(5 * 5rem);
@@ -147,7 +148,7 @@ li a {
     box-sizing: border-box;
   }
   li:hover > a {
-    color: var(--sec_color);
+    background: #eeeeee22;
     transition: 0.3s;
     border-radius: 0.5rem;
   }
@@ -162,7 +163,7 @@ li a {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 0px 15px;
+    padding: 0px 20px;
     box-sizing: border-box;
   }
 }

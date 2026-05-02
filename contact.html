@@ -1,12 +1,12 @@
 <!doctype html>
-<html lang="en" id="html" class="contact">
+<html lang="en" id="html">
   <head>
     <meta charset="UTF-8" />
     <meta
       property="og:title"
       content="B2B Technology / Data-Driven Marketing Services"
     />
-    <meta property="og:url" content="/spinortech/" />
+    <meta property="og:url" content="https://spinortech.io" />
     <meta
       property="og:description"
       content="Intelligent Marketing, Data Analysis, and Digital Automation for small and medium businesses."
@@ -31,25 +31,27 @@
     <link rel="stylesheet" type="text/css" href="./CSS/navbar.css" />
     <link rel="stylesheet" type="text/css" href="./CSS/slider.css" />
     <link rel="stylesheet" type="text/css" href="./CSS/index.css" />
+    <link rel="stylesheet" type="text/css" href="./CSS/form.css" />
     <title>Spinortech | Contact</title>
   </head>
   <script src="index.js" defer></script>
+  <!-- Body -->
 
-  <body>
+  <body class="contact">
     <nav>
-      <div class="navbar">
+      <div class="navbar" id="navbar">
         <button class="logo" onclick="window.location.href = './'">
-          <!-- <img
+          <img
             src="public/icon.webp"
             alt="Spinortech Logo"
             class="logo-image"
           />
-          <div class="logoName">Spinortech</div> -->
+          <div class="logoName">SPINORTECH</div>
         </button>
+
         <ul class="nav-links" id="NavDropMenu">
           <li><a href="./">Home</a></li>
           <li><a href="./services">Services</a></li>
-          <li><a href="./case-studies">Case studies</a></li>
           <li><a href="./contact">Contact</a></li>
           <li><a href="./about">About Us</a></li>
         </ul>
@@ -63,17 +65,77 @@
       </div>
     </nav>
 
-    <div class="slider_container" id="slider_container">
-      <section class="solution_who_we">
-        <div class="solution_statement">
-          <h2>Contact Us</h2>
-          <p>
-            We start with a conversation, not a pitch. Tell us what you are
-            working with — your data, your constraints, your goals. We will tell
-            you honestly whether we can help.
-          </p>
-        </div>
-      </section>
+    <div class="slider_container">
+      <div class="slider_container_wrapper">
+        <header>
+          <div class="hero">
+            <div>
+              <h3 class="sc bd-700">GET IN TOUCH</h3>
+              <div class="display">
+                We start with a conversation, <br />
+                not a pitch.
+              </div>
+            </div>
+            <p>
+              Tell us what you are working with your data, your constraints,
+              your goals.<br />
+              We will tell you honestly whether we can help.
+            </p>
+          </div>
+          <div class="indent ft">
+            <span class="sc">-</span> No sales call. No deck. Just a
+            conversation.<br />
+            <span class="sc">-</span> We will tell you if we are not the right
+            fit.<br />
+            <span class="sc">-</span> Every engagement begins with a
+            diagnostic.<br />
+          </div>
+          <form action="/">
+            <label for="form_name">Name</label>
+            <input
+              type="text"
+              id="form_name"
+              name="form_name"
+              value=""
+              placeholder="Your full name"
+            />
+            <label for="form_company">COMPANY</label>
+            <input
+              type="text"
+              id="form_company"
+              name="form_company"
+              value=""
+              placeholder="Organozation name"
+            />
+            <label for="form_email">E-MAIL</label>
+            <input
+              type="text"
+              id="form_email"
+              name="form_email"
+              value=""
+              placeholder="your@email.com"
+            />
+            <label for="form_challenge">WHAT ARE YOU TRYING TO SOLVE?</label>
+            <input
+              type="text"
+              id="form_challenge"
+              name="form_challenge"
+              value=""
+              placeholder="Describe your challenge or goal..."
+            />
+            <label for="form_where_from">HOW DID YOU HEAR ABOUT US?</label>
+            <input
+              type="text"
+              id="form_where_from"
+              name="form_where_from"
+              value=""
+              placeholder="Search, Linkedin,....."
+            />
+            <input type="submit" value="Submit" class="CTA_button submit" />
+          </form>
+        </header>
+        <div style="padding-top: 4rem"></div>
+      </div>
     </div>
   </body>
 </html>
