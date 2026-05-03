@@ -264,12 +264,13 @@ header {
   flex-direction: row;
   justify-content: space-around;
   flex-wrap: wrap;
-  column-gap: 2rem;
+  margin-bottom: -2rem;
 }
 
 .boxes-45 div {
   max-width: 45%;
   min-width: 45%;
+  margin-bottom: 2rem;
 }
 .html_desktop .list_of_boxes {
   flex-direction: row;
