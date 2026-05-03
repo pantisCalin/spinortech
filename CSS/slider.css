@@ -9,14 +9,13 @@
   background-repeat: no-repeat;
   overflow: auto;
   box-sizing: border-box;
-  gap: 8rem;
 }
 
 .slider_container_wrapper {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  gap: 8rem;
+  gap: var(--scroll_gap);
   scroll-behavior: smooth;
   max-width: var(--max-width);
   width: 100%;

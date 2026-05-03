@@ -14,6 +14,7 @@
   --h3_font: 1.22rem; /*11pt->14.66px->1.22rem*/
   --body_font: 1rem; /*9pt->12px->1rem*/
   --footnote_font: 0.777rem; /*7pt->9.33px*/
+  --scroll_gap: 8rem;
 }
 
 @font-face {
@@ -52,7 +53,10 @@
   line-height: 2;
   font-size: var(--body_font);
 }
-
+.dfr {
+  display: flex;
+  flex-direction: row;
+}
 .sc {
   color: var(--sec_color);
 }
@@ -195,25 +199,10 @@ header {
   max-width: 48rem;
 }
 
-.hero p {
-  margin: 0;
-}
-
 .bd-left {
   border-left: 1px solid var(--sec_color);
   padding-left: 0.5rem;
   box-sizing: border-box;
-}
-.indent_small {
-  margin-left: 0.5rem;
-}
-
-.indent {
-  margin-left: 1.5rem;
-}
-
-.indent_big {
-  margin-left: 3rem;
 }
 
 .CTA_button {
@@ -259,6 +248,7 @@ header {
   flex-direction: column;
   border-radius: 1.5rem;
   padding: 1.5rem;
+  box-sizing: border-box;
   border: 1px solid var(--sec_color);
   background: var(--fill_main_color);
   max-width: 600px;
@@ -269,6 +259,18 @@ header {
   gap: 0.5rem;
 }
 
+.boxes-45 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  column-gap: 2rem;
+}
+
+.boxes-45 div {
+  max-width: 45%;
+  min-width: 45%;
+}
 .html_desktop .list_of_boxes {
   flex-direction: row;
   gap: 0rem;
@@ -311,8 +313,15 @@ header {
   gap: 2rem;
   padding: 3rem var(--x_padding);
   box-sizing: border-box;
+  margin-top: var(--scroll_gap);
+  margin-bottom: var(--scroll_gap);
 }
 
+.full_width_content {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
 .left_description {
   display: flex;
   flex-direction: column;
@@ -324,15 +333,27 @@ header {
   border: 1px solid var(--sec_color);
   background-color: var(--fill_main_color);
 }
-.html_desktop .full_width_section {
+.html_desktop .full_width_content {
   flex-direction: row;
   justify-content: space-between;
+}
+.html_desktop .full_width_section {
+  flex-direction: row;
+  justify-content: center;
 }
 .html_desktop .full_width_section .line_division_short {
   display: none;
 }
 .html_desktop .left_description {
   gap: 1rem;
+}
+.html_desktop .sc_on_desktop_h1 {
+  font-size: var(--h1_font);
+  color: var(--sec_color);
+}
+
+.html_desktop .dsn_desktop {
+  display: none;
 }
 .html_desktop .left_description > h3 {
   font-size: var(--h1_font);
@@ -356,6 +377,34 @@ header {
 
 .html_desktop .services .display {
   font-weight: 800;
+}
+
+.indent_small {
+  margin-left: 0.5rem;
+}
+
+.indent {
+  margin-left: 1.5rem;
+}
+
+.indent_big {
+  margin-left: 3rem;
+}
+.hamburger {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background-color: var(--sec_color);
+  border-radius: 2px;
 }
 @media (min-width: 900px) {
   html {

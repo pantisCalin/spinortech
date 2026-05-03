@@ -23,11 +23,11 @@ form label {
 }
 
 form input[type="text"] {
-  font-size: var(--body_font);
+  font-size: 16px;
   padding: var(--body_font);
   margin-bottom: 1rem;
   border: 1px solid white;
-  background: transparent;
+  background: linear-gradient(45deg, #ffffff5e, #eff4f81a);
 }
 
 form input[type="text"]:focus {
