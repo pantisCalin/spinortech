@@ -32,8 +32,7 @@ function DropDownFunction() {
 const CheckOutsideTouch = (e) => {
   if (
     e.target.id !== "NavDropMenu" &&
-    e.target.id !== "NavDropButton" &&
-    e.target.id !== "NavDropButton" &&
+    e.target.id !== "hamburger" &&
     e.target.tagName !== "A"
   ) {
     console.log("Clicked outside");

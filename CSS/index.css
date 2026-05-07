@@ -172,14 +172,14 @@ footer {
 
 .html_desktop .hero {
   background-origin: border-box;
-  padding-bottom: 5vw;
-  padding-top: 5vw;
 }
 
 header {
   padding-left: var(--x_padding);
   padding-right: var(--x_padding);
-  margin-top: 10rem;
+  padding-bottom: 2.5vw;
+  padding-top: 2.5vw;
+  margin-top: calc(var(--navbar_height) + 1rem);
 }
 
 .hero,
@@ -218,14 +218,14 @@ header {
 }
 
 .CTA_button:hover {
-  background-color: white;
-  border: 1px solid var(--main_color);
+  background-color: var(--main_color);
+  border: 1px solid var(--sec_color);
   box-sizing: border-box;
   transition: 0.3s;
   cursor: pointer;
 }
 .CTA_button:hover a {
-  color: var(--main_color);
+  color: var(--sec_color);
 }
 .CTA_button a {
   font-size: var(--h3_font);
@@ -275,11 +275,19 @@ header {
 .html_desktop .list_of_boxes {
   flex-direction: row;
   gap: 0rem;
+  border: 1px solid var(--sec_color);
+  border-radius: 1rem;
+  overflow: hidden;
 }
 
 .html_desktop .section_box {
   flex: 1;
+  border: none;
   border-radius: 0;
+}
+.html_desktop .section_box:hover {
+  background-color: #f59f0b33;
+  transition: 0.3s;
 }
 .section_box > :nth-child(2) {
   margin-bottom: 1rem;
@@ -288,7 +296,7 @@ header {
 
 .html_desktop .list_of_boxes > :nth-child(1),
 .html_desktop .list_of_boxes > :nth-child(2) {
-  border-right: none;
+  border-right: 1px solid var(--sec_color);
 }
 
 .left_part_decription > p:nth-child(2) {
@@ -331,7 +339,8 @@ header {
 
 .html_desktop .full_width_section {
   padding: 3rem var(--x_padding);
-  border: 1px solid var(--sec_color);
+  border-top: 1px solid var(--sec_color);
+  border-bottom: 1px solid var(--sec_color);
   background-color: var(--fill_main_color);
 }
 .html_desktop .full_width_content {

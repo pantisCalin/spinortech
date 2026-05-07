@@ -9,7 +9,6 @@ nav {
   height: var(--navbar_height);
   box-sizing: border-box;
   z-index: 1000;
-  background-color: var(--fill_main_color);
 }
 .navbar {
   display: flex;
@@ -31,7 +30,7 @@ nav {
   font-size: 2rem;
   display: flex;
   border: none;
-  background-color: var(--fill_main_color);
+  background-color: transparent;
   height: 100%;
   padding: 1rem;
   box-sizing: border-box;
@@ -51,12 +50,12 @@ ul {
   margin: 0;
   box-sizing: border-box;
   transition: 0.5s;
+  border-bottom: 1px solid var(--sec_color);
 }
 
 li {
   width: 100%;
   min-height: 5rem;
-  background-color: var(--fill_main_color);
   font-weight: 800;
   border-top: 1px solid var(--main_color);
   box-sizing: border-box;
@@ -76,9 +75,12 @@ li a {
   align-items: center;
   justify-content: center;
   font-weight: 400;
+  background: #1a2234f6;
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
 }
 .ExtendDrow {
-  height: calc(5 * 5rem);
+  height: calc(5 * 4rem);
 }
 
 .logo {
@@ -89,6 +91,11 @@ li a {
   cursor: pointer;
   user-select: none;
   height: var(--navbar_height);
+  width: 100%;
+  justify-content: center;
+  background: #1a2234f6;
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
 }
 
 .logo-image {
@@ -106,12 +113,24 @@ li a {
 }
 
 @media (min-width: 1200px) {
+  nav {
+    border-bottom: 1px solid var(--sec_color);
+    background: #1a2234f6;
+  }
   html {
     font-size: 10pt;
   }
 
   .navbar {
     justify-content: space-between;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+  }
+  .logo {
+    width: fit-content;
+    backdrop-filter: blur(0px);
+    -webkit-backdrop-filter: blur(0px);
+    background: transparent;
   }
   .logo-image {
     display: block;
@@ -137,33 +156,50 @@ li a {
     width: auto;
     left: auto;
     transition: 0.5s;
+    border-bottom: none;
+    min-height: unset;
+    height: 100%;
+    box-sizing: border-box;
+    background: transparent;
   }
 
   li {
     width: fit-content;
     min-height: unset;
-    height: var(--navbar_height);
     font-weight: 500;
     border-top: none;
     box-sizing: border-box;
+    height: 100%;
+    padding: 0px 20px;
+    background: transparent;
+    cursor: pointer;
   }
   li:hover > a {
-    background: #eeeeee22;
+    color: var(--sec_color);
     transition: 0.3s;
     border-radius: 0.5rem;
+  }
+  li a::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    bottom: -4px; /* Space between text and line */
+    left: 0;
+    background-color: var(--sec_color); /* Color of the underline */
+    transform: scaleX(0);
+    transform-origin: bottom left;
+    transition: transform 0.3s ease-out;
+  }
+
+  li:hover a::after {
+    transform: scaleX(1);
   }
   li a {
     transition: 0.3s;
-    border-radius: 0.5rem;
     color: var(--bkg_color);
     text-decoration: none;
     font-size: 14px;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0px 20px;
-    box-sizing: border-box;
+    height: fit-content;
   }
 }
