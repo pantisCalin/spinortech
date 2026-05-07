@@ -35,6 +35,9 @@
     <link rel="stylesheet" type="text/css" href="./CSS/form.css" />
     <title>Spinortech | Home</title>
   </head>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
   <script src="index.js" defer></script>
   <!-- Body -->
 
@@ -51,10 +54,18 @@
         </button>
 
         <ul class="nav-links" id="NavDropMenu">
-          <li><a href="./">Home</a></li>
-          <li><a href="./services">Services</a></li>
-          <li><a href="./contact">Contact</a></li>
-          <li><a href="./about">About Us</a></li>
+          <li>
+            <a href="./"><span class="RaiseLine">Home</span></a>
+          </li>
+          <li>
+            <a href="./services"><span class="RaiseLine">Services</span></a>
+          </li>
+          <li>
+            <a href="./contact"><span class="RaiseLine">Contact</span></a>
+          </li>
+          <li>
+            <a href="./about"><span class="RaiseLine">About Us</span></a>
+          </li>
         </ul>
         <button
           class="NavDropButton"
@@ -72,7 +83,7 @@
 
     <div class="slider_container">
       <div class="slider_container_wrapper">
-        <header class="background_logo_right">
+        <header class="background_logo_right fadeIn">
           <div class="hero">
             <div class="description">DATA ⋅ SYSTEMS ⋅ INTELLIGENCE</div>
             <div class="display">
@@ -90,10 +101,10 @@
         </header>
 
         <section>
-          <h2 class="bgc">WHAT WE BUILD</h2>
-          <div class="line_division_short"></div>
-          <div class="list_of_boxes">
-            <div class="section_box">
+          <h2 class="bgc" data-aos="fade-up">WHAT WE BUILD</h2>
+          <div class="line_division_short" data-aos="fade-up"></div>
+          <div class="list_of_boxes" data-aos="fade-up">
+            <div class="section_box" data-aos="fade-up">
               <p class="sc">01</p>
               <h3 class="bdf">Local Language Models</h3>
               <p class="ft">
@@ -101,7 +112,7 @@
                 internet. Deployed on your infrastructure.
               </p>
             </div>
-            <div class="section_box">
+            <div class="section_box" data-aos="fade-up">
               <p class="sc">02</p>
               <h3 class="bdf">Intelligent Marketing</h3>
               <p class="ft">
@@ -109,7 +120,7 @@
                 measure what causes revenue.
               </p>
             </div>
-            <div class="section_box">
+            <div class="section_box" data-aos="fade-up">
               <p class="sc">03</p>
               <h3 class="bdf">Digital Automation</h3>
               <p class="ft">
@@ -121,15 +132,15 @@
         </section>
       </div>
 
-      <div class="full_width_section">
+      <div class="full_width_section" data-aos="fade-up">
         <div class="slider_container_wrapper">
           <div class="full_width_content">
-            <div class="left_description">
+            <div class="left_description" data-aos="fade-up">
               <h2 class="sc">HOW WE THINK</h2>
               <div class="line_division_short"></div>
               <h3>The Spinortech standard</h3>
             </div>
-            <div class="enumerate_bullets">
+            <div class="enumerate_bullets" data-aos="fade-up">
               <div class="enumerate_item">
                 • We ask pointed questions before offering solutions.
               </div>
@@ -152,15 +163,15 @@
       </div>
       <div class="slider_container_wrapper">
         <section>
-          <h2 class="sc_on_desktop_h1">
+          <h2 class="sc_on_desktop_h1" data-aos="fade-up">
             We start with a conversation, not a pitch.
           </h2>
-          <p class="ft indent">
+          <p class="ft indent" data-aos="fade-up">
             Tell us what you are working with your data, <br />
             your constraints,your goals.<br />
             We will tell you honestly whether we can help.
           </p>
-          <div class="indent ft">
+          <div class="indent ft" data-aos="fade-up">
             <span class="sc">―</span> No sales call. No deck. Just a
             conversation.<br />
             <span class="sc">―</span> We will tell you if we are not the right
@@ -168,7 +179,7 @@
             <span class="sc">―</span> Every engagement begins with a
             diagnostic.<br />
           </div>
-          <form action="/">
+          <form action="/" data-aos="fade-up">
             <label for="form_name">Name</label>
             <input
               type="text"
@@ -226,4 +237,7 @@
       </div>
     </div>
   </body>
+  <script>
+    AOS.init();
+  </script>
 </html>

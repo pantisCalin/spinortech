@@ -34,6 +34,9 @@
     <link rel="stylesheet" type="text/css" href="./CSS/form.css" />
     <title>Spinortech | Contact</title>
   </head>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
   <script src="index.js" defer></script>
   <!-- Body -->
 
@@ -50,10 +53,18 @@
         </button>
 
         <ul class="nav-links" id="NavDropMenu">
-          <li><a href="./">Home</a></li>
-          <li><a href="./services">Services</a></li>
-          <li><a href="./contact">Contact</a></li>
-          <li><a href="./about">About Us</a></li>
+          <li>
+            <a href="./"><span class="RaiseLine">Home</span></a>
+          </li>
+          <li>
+            <a href="./services"><span class="RaiseLine">Services</span></a>
+          </li>
+          <li>
+            <a href="./contact"><span class="RaiseLine">Contact</span></a>
+          </li>
+          <li>
+            <a href="./about"><span class="RaiseLine">About Us</span></a>
+          </li>
         </ul>
         <button
           class="NavDropButton"
@@ -75,17 +86,17 @@
           <div class="hero">
             <div>
               <h3 class="sc bd-700 dsn_desktop">GET IN TOUCH</h3>
-              <div class="display sc_on_desktop_h1">
+              <div class="display sc_on_desktop_h1 fadeIn">
                 We start with a conversation, <br />
                 not a pitch.
               </div>
             </div>
-            <p>
+            <p class="fadeIn">
               Tell us what you are working with your data, your constraints,
               your goals.<br />
               We will tell you honestly whether we can help.
             </p>
-            <div class="indent ft">
+            <div class="indent ft fadeIn">
               <span class="sc">―</span> No sales call. No deck. Just a
               conversation.<br />
               <span class="sc">―</span> We will tell you if we are not the right
@@ -94,7 +105,7 @@
               diagnostic.<br />
             </div>
           </div>
-          <form action="/">
+          <form action="/" data-aos="fade-up">
             <label for="form_name">Name</label>
             <input
               type="text"
@@ -142,4 +153,7 @@
       </div>
     </div>
   </body>
+  <script>
+    AOS.init();
+  </script>
 </html>

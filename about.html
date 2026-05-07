@@ -34,6 +34,8 @@
     <link rel="stylesheet" type="text/css" href="./CSS/form.css" />
     <title>Spinortech | About</title>
   </head>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
   <script src="index.js" defer></script>
   <!-- Body -->
 
@@ -50,10 +52,18 @@
         </button>
 
         <ul class="nav-links" id="NavDropMenu">
-          <li><a href="./">Home</a></li>
-          <li><a href="./services">Services</a></li>
-          <li><a href="./contact">Contact</a></li>
-          <li><a href="./about">About Us</a></li>
+          <li>
+            <a href="./"><span class="RaiseLine">Home</span></a>
+          </li>
+          <li>
+            <a href="./services"><span class="RaiseLine">Services</span></a>
+          </li>
+          <li>
+            <a href="./contact"><span class="RaiseLine">Contact</span></a>
+          </li>
+          <li>
+            <a href="./about"><span class="RaiseLine">About Us</span></a>
+          </li>
         </ul>
         <button
           class="NavDropButton"
@@ -73,7 +83,7 @@
       <div class="slider_container_wrapper">
         <header>
           <div class="flex_gap_normal">
-            <div class="hero" style="padding: 0">
+            <div class="hero fadeIn" style="padding: 0">
               <div class="display">
                 Most organisations sit on more information than they know
               </div>
@@ -93,9 +103,9 @@
                 actually operates.
               </p>
             </div>
-            <div class="line_division_long"></div>
-            <h2>The Name</h2>
-            <p>
+            <div class="line_division_long" data-aos="fade-up"></div>
+            <h2 data-aos="fade-up">The Name</h2>
+            <p data-aos="fade-up">
               The name comes from <span class="sc">spinor</span>, a mathematical
               object from quantum mechanics.<br />
               A spinor is not just a vector..<br />
@@ -104,9 +114,9 @@
               That is the standard we hold ourselves to.
             </p>
 
-            <div class="line_division_long"></div>
-            <h2>Philosophy</h2>
-            <div class="boxes-45">
+            <div class="line_division_long" data-aos="fade-up"></div>
+            <h2 data-aos="fade-up">Philosophy</h2>
+            <div class="boxes-45" data-aos="fade-up">
               <div class="section_box_dark">
                 <p class="ft">
                   We ask pointed questions before offering solutions
@@ -131,9 +141,9 @@
               </div>
             </div>
 
-            <div class="line_division_long"></div>
-            <h2>Who We Work With?</h2>
-            <div class="enumerate_bullets indent">
+            <div class="line_division_long" data-aos="fade-up"></div>
+            <h2 data-aos="fade-up">Who We Work With?</h2>
+            <div class="enumerate_bullets indent" data-aos="fade-up">
               <p>• We ask pointed questions before offering solutions.<br /></p>
               <p>
                 • We push back on vague goals and replace them with measurable
@@ -149,7 +159,7 @@
               </p>
             </div>
 
-            <button class="CTA_button">
+            <button class="CTA_button" data-aos="fade-up">
               <a href="./contact" class="cta-button">Start a conversations</a>
             </button>
           </div>
@@ -158,4 +168,7 @@
       </div>
     </div>
   </body>
+  <script>
+    AOS.init();
+  </script>
 </html>
