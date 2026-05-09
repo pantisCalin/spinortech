@@ -32,12 +32,15 @@
     <link rel="stylesheet" type="text/css" href="./CSS/slider.css" />
     <link rel="stylesheet" type="text/css" href="./CSS/index.css" />
     <link rel="stylesheet" type="text/css" href="./CSS/form.css" />
+    <link rel="stylesheet" type="text/css" href="./CSS/spinner.css" />
     <title>Spinortech | Contact</title>
   </head>
+  <script src="https://formgrid.dev/embed.js" async></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 
   <script src="index.js" defer></script>
+  <script src="FetchForm.js" defer></script>
   <!-- Body -->
 
   <body class="contact">
@@ -105,47 +108,68 @@
               diagnostic.<br />
             </div>
           </div>
-          <form action="/" data-aos="fade-up">
-            <label for="form_name">Name</label>
+          <!--  Form  -->
+          <form id="contactForm">
+            <label for="client_name">Name</label>
             <input
+              class="inputAllTypes"
               type="text"
-              id="form_name"
-              name="form_name"
+              id="client_name"
+              name="client_name"
               value=""
               placeholder="Your full name"
             />
-            <label for="form_company">COMPANY</label>
+            <label for="client_company">COMPANY</label>
             <input
+              class="inputAllTypes"
               type="text"
-              id="form_company"
-              name="form_company"
+              id="client_company"
+              name="client_company"
               value=""
               placeholder="Organozation name"
             />
-            <label for="form_email">E-MAIL</label>
+
+            <!-- Honeypot Field (Invisible to humans) -->
+            <div class="secondary_email">
+              <label for="client_secondary_email">Secondary email</label>
+              <input
+                class="inputAllTypes"
+                type="email"
+                id="client_secondary_email"
+                name="client_secondary_email"
+                value=""
+                placeholder="your@email.com"
+              />
+            </div>
+            <label for="client_email">E-MAIL</label>
             <input
-              type="text"
-              id="form_email"
-              name="form_email"
+              class="inputAllTypes"
+              type="email"
+              id="client_email"
+              name="client_email"
               value=""
               placeholder="your@email.com"
             />
-            <label for="form_challenge">WHAT ARE YOU TRYING TO SOLVE?</label>
-            <input
-              type="text"
-              id="form_challenge"
-              name="form_challenge"
+            <label for="client_challenge">WHAT ARE YOU TRYING TO SOLVE?</label>
+            <textarea
+              class="inputAllTypes"
+              id="client_challenge"
+              name="client_challenge"
               value=""
               placeholder="Describe your challenge or goal..."
-            />
-            <label for="form_where_from">HOW DID YOU HEAR ABOUT US?</label>
+              rows="5"
+              cols="50"
+            ></textarea>
+            <label for="client_hear_about">HOW DID YOU HEAR ABOUT US?</label>
             <input
+              class="inputAllTypes"
               type="text"
-              id="form_where_from"
-              name="form_where_from"
+              id="client_hear_about"
+              name="client_hear_about"
               value=""
               placeholder="Search, Linkedin,....."
             />
+            <div id="formMessage"></div>
             <input type="submit" value="Submit" class="CTA_button submit" />
           </form>
         </header>

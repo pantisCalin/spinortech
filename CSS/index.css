@@ -233,6 +233,7 @@ header {
   box-sizing: border-box;
   transition: 0.3s;
   cursor: pointer;
+  color: var(--sec_color);
 }
 .CTA_button:hover a {
   color: var(--sec_color);
