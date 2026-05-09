@@ -68,14 +68,14 @@ form.addEventListener("submit", async (e) => {
       headers: {
         Accept: "application/json",
       },
-      redirect: "manual",
     });
-    console.log(response);
-    if (response.ok) {
+    if (response.status === 0 || response.ok) {
       form.reset();
       form_div_message.textContent =
         "Thank you! Your details have been successfully received. A member of the Spinortech team will review your inquiry and reach out to you shortly.";
       form_div_message.className = "success_form_contact";
+    } else {
+      throw new Error(`Server error: ${response.status}`);
     }
   } catch (error) {
     console.log(error);
