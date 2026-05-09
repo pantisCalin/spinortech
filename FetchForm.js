@@ -68,6 +68,7 @@ form.addEventListener("submit", async (e) => {
       headers: {
         Accept: "application/json",
       },
+      redirect: "manual",
     });
     console.log(response);
     if (response.ok) {
