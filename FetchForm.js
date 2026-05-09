@@ -69,6 +69,7 @@ form.addEventListener("submit", async (e) => {
         Accept: "application/json",
       },
     });
+    console.log(response);
     if (response.ok) {
       form.reset();
       form_div_message.textContent =
@@ -76,6 +77,7 @@ form.addEventListener("submit", async (e) => {
       form_div_message.className = "success_form_contact";
     }
   } catch (error) {
+    console.log(error);
     form_div_message.textContent =
       "We encountered an issue while processing your request. Please try submitting the form again.";
     form_div_message.className = "error_form_contact";
