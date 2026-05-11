@@ -31,7 +31,7 @@ form.addEventListener("submit", async (e) => {
 
     // Check if trimmed value is empty
     if (value == "") {
-      form_div_message.textContent = `The ${form_tag.split("_").slice(1).join(" ")} form field can not be empty`;
+      form_div_message.textContent = `The ${form_tag.split("_").slice(1).join(" ")} field can not be empty`;
       return;
     }
 
@@ -60,7 +60,7 @@ form.addEventListener("submit", async (e) => {
   form_div_message.appendChild(spinner);
   form_div_message.appendChild(pending_message);
 
-  // Do the fetch
+  // // Do the fetch
   try {
     const response = await fetch(server_link, {
       method: "POST",
@@ -73,7 +73,7 @@ form.addEventListener("submit", async (e) => {
     if (response.status === 0 || response.ok) {
       form.reset();
       form_div_message.textContent =
-        "Thank you! Your details have been successfully received. A member of the Spinortech team will review your inquiry and reach out to you shortly.";
+        "Thank you for reaching out. Your service request has been received and is being processed.";
       form_div_message.className = "success_form_contact";
     } else {
       throw new Error(`Server error: ${response.status}`);
@@ -81,7 +81,7 @@ form.addEventListener("submit", async (e) => {
   } catch (error) {
     console.log(error);
     form_div_message.textContent =
-      "We encountered an issue while processing your request. Please try submitting the form again.";
+      "We're experiencing technical difficulties. Your request couldn't be sent, please try again in a few moments.";
     form_div_message.className = "error_form_contact";
   }
 });

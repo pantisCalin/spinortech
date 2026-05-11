@@ -61,14 +61,14 @@ form .submit {
 }
 
 .success_form_contact {
-  color: rgb(0, 255, 0);
+  color: #28a745;
 }
 .error_form_contact {
-  color: rgb(255, 0, 0);
+  color: #dc3545;
 }
 
 .pending_form_contact {
-  color: var(--sec_color);
+  color: var(--bkg_color);
 }
 #formMessage {
   display: flex;
